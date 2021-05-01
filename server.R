@@ -7,7 +7,7 @@
 ############################################
 
 # Import libraries
-library(shiny)
+#library(shiny)
 library(h2o)
 library(recipes)
 library(readxl)
@@ -38,7 +38,7 @@ recipe_obj <- recipe(Attrition ~ ., data = train_readable_tbl) %>%
   step_num2factor(StockOptionLevel, levels = c('0', '1', '2', '3'), transform = function(x) {x + 1}) %>%
   prep()
 
-recipe_obj
+#recipe_obj
 
 train_tbl <- bake(recipe_obj, new_data = train_readable_tbl)
 test_tbl  <- bake(recipe_obj, new_data = test_readable_tbl)

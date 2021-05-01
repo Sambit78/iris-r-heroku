@@ -3,7 +3,7 @@
 # Example R code to install packages if not already installed
 #
 
-my_packages = c("shiny", "h2o","recipes","readxl","tidyverse","tidyquant","lime","stringr","forcats")
+my_packages = c("shiny", "h2o","recipes","readxl","tidyverse","tidyquant","lime","stringr","forcats","glue","cowplot","GGally","skimr","fs","writexl")
 
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
